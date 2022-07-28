@@ -170,7 +170,6 @@ bool HTTPRequestContext::InitCurl()
 	if (!proxy.empty())
 	{
 		curl_easy_setopt(curl, CURLOPT_PROXY, proxy.c_str());
-		curl_easy_setopt(curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTPS);
 		smutils->LogMessage(myself, "hreqc::sending proxy -> %s", proxy.c_str());
 	}
 
